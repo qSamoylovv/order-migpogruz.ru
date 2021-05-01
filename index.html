@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="theme-color" content="#ffffff" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="icon" href="favicons/favicon.svg" />
+        <link rel=”mask-icon” href=”favicons/mask-icon.svg” color=”#000000">
+        <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png" />
+        <link rel="manifest" href="manifest.json" />
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Грузчики в Москве</title>
+    </head>
+    <body>
+        <header class="header">
+            <video autoplay muted loop id="header-video">
+                <source src="video/zxc.mp4" type="video/mp4" />
+            </video>
+            <div class="header-top" id="header-top">
+                <div class="logo">
+                    <a href="#" class="link"
+                        ><img src="svg/logo.svg" alt="МигПогруз"
+                    /></a>
+                    <p>Быстро. Выгодно. Надежно.</p>
+                </div>
+                <div class="menu-nav-right">
+                    <a href="tel:+79771301088" class="link tel-btn"
+                        >+7 (977) 130-10-88</a
+                    >
+                    <nav class="nav-toggle">
+                        <ul class="desk-menu-list">
+                            <li class="menu-item">
+                                <a href="#price" class="link"
+                                    >Услуги грузчиков</a
+                                >
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="menu-info">
+                    <ul class="info-list">
+                        <li class="info-item">
+                            <span>Ноcим</span> на руках <span>24/7</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header-content wrapper">
+                <div class="content-info">
+                    <h1 class="header-title">Услуги грузчиков в Москве</h1>
+                    <p>
+                        Погрузим ваши вещи и стройматериалы по
+                        <span>300р/час</span>
+                    </p>
+                    <p>
+                        Через <span>час</span> будем у вас, упакуем
+                        <span>бесплатно</span>!
+                    </p>
+                    <ul class="thesis-list">
+                        <li class="thesis-item">1 грузчик 300р/час</li>
+                        <li class="thesis-item">
+                            4 часа <span>минимальный</span> заказ
+                        </li>
+                        <li class="thesis-item">Нет поэтажной оплаты</li>
+                    </ul>
+                    <div class="total-item">
+                        <span>Итого</span>: цена минимального заказа
+                        <span>1200 руб</span> (1 грузчик на 4 часа)
+                    </div>
+
+                    <button class="tel-btn open-form" id="open-form-btn">
+                        Оставить заявку
+                    </button>
+                </div>
+
+                <article class="form-modal form-active" id="form-modal">
+                    <div class="form-section">
+                        <div class="form-content">
+                            <div class="modal-close" id="modal-close">
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <h2 class="form-title">
+                                Перевезем быстро и легко! <br />
+                            </h2>
+                            <p class="form-desc">
+                                Оставьте заявку и мы свяжемся с вами.
+                            </p>
+                            <form class="form">
+                                <input
+                                    type="hidden"
+                                    name="title"
+                                    value="Форма: Оставить заявку на звонок"
+                                />
+                                <div class="input-row">
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        placeholder="Имя"
+                                    />
+                                    <input
+                                        type="tel"
+                                        name="tel"
+                                        placeholder="+7(999) 000-00-00"
+                                    />
+                                    <textarea name="desc" id="">
+Нужно 10 грузчиков на 8 часов</textarea
+                                    >
+                                </div>
+                                <button class="form-btn">
+                                    Оставить заявку!
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </header>
+
+        <main class="main wrapper">
+            <section class="section price" id="price">
+                <h2 class="section-title">Наши услуги и цены</h2>
+                <div class="section-content">
+                    <article class="porters">
+                        <h3 class="section-other-title">Грузчики</h3>
+                        <div class="price-row">
+                            <div class="price-item">
+                                <div class="price-item-content">
+                                    <div class="price-title">
+                                        1 грузчик - 250р/час
+                                    </div>
+                                    <p class="price-desc">
+                                        Если весь груз
+                                        <span>до 20кг.</span> за одну единицу,
+                                        нет подъема/спуска по лестнице и пронос
+                                        <span>менее 50м.</span>
+                                    </p>
+                                </div>
+                                <a
+                                    class="tel-btn price-button"
+                                    href="tel:+79771301088"
+                                    >Узнать подробнее</a
+                                >
+                            </div>
+                            <div class="price-item">
+                                <div class="price-item-content">
+                                    <div class="price-title">
+                                        1 грузчик - 300р/час
+                                    </div>
+                                    <p class="price-desc">
+                                        Если есть груз от <span>20</span> до
+                                        <span>50кг.</span> за одну единицу, есть
+                                        пронос <span>более 50м.</span> или надо
+                                        поднимать/спускать груз вручную по
+                                        лестнице.
+                                    </p>
+                                    <p class="price-desc">
+                                        <span>Итого</span> цена минимального
+                                        заказа - <span>1200руб.</span> <br />(1
+                                        грузчик на 4 часа)
+                                    </p>
+                                </div>
+                                <a
+                                    class="tel-btn price-button"
+                                    href="tel:+79771301088"
+                                    >Узнать подробнее</a
+                                >
+                            </div>
+                            <div class="price-item">
+                                <div class="price-item-content">
+                                    <div class="price-title">
+                                        1 грузчик - 350р/час
+                                    </div>
+                                    <p class="price-desc">
+                                        Если есть груз от <span>50</span> до
+                                        <span>100кг.</span> за одну единицу.
+                                    </p>
+                                    <p class="price-desc">
+                                        <span>Итого</span> цена минимального
+                                        заказа - <span>1400руб.</span> <br />(1
+                                        грузчик на 4 часа)
+                                    </p>
+                                </div>
+                                <a
+                                    class="tel-btn price-button"
+                                    href="tel:+79771301088"
+                                    >Узнать подробнее</a
+                                >
+                            </div>
+                            <div class="price-item">
+                                <div class="price-item-content">
+                                    <div class="price-title">
+                                        1 грузчик - 400р/час
+                                    </div>
+                                    <p class="price-desc">
+                                        Если есть груз от
+                                        <span>100кг.</span> за одну единицу.
+                                    </p>
+                                    <p class="price-desc">
+                                        <span>Итого</span> цена минимального
+                                        заказа - <span>1600руб.</span> <br />(1
+                                        грузчик на 4 часа)
+                                    </p>
+                                </div>
+                                <a
+                                    class="tel-btn price-button"
+                                    href="tel:+79771301088"
+                                    >Узнать подробнее</a
+                                >
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="transportation">
+                        <h3 class="section-other-title">Грузоперевозки</h3>
+                        <div class="price-row">
+                            <div class="price-item transportation-row">
+                                <div class="price-item-content">
+                                    <p class="transportation-title">
+                                        Газели (будка)
+                                    </p>
+                                    <ul class="transportation-list">
+                                        <li class="list-item">
+                                            <span>4</span> метра
+                                        </li>
+                                        <li class="list-item">
+                                            <span>1.5</span> тонны
+                                        </li>
+                                        <li class="list-item">
+                                            <span>18</span> кубов
+                                        </li>
+                                    </ul>
+                                    <p class="price-desc">
+                                        На 4 часа
+                                        <span>3500руб.</span> (нал., б/н). Далее
+                                        каждый час + 700руб.
+                                    </p>
+                                    <p class="price-desc">
+                                        Есть 5 тонники, 10 тонники. Цену
+                                        уточняйте по телефону. Наличный и
+                                        безналичный расчет.
+                                    </p>
+                                </div>
+                                <a
+                                    class="tel-btn price-button"
+                                    href="tel:+79771301088"
+                                    >Узнать подробнее</a
+                                >
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <h2>МигПогруз 2017-2021</h2>
+        </footer>
+
+        <section class="popup-send-form">
+            <div class="popup-wrapper">
+                <div class="popup-content">
+                    <div class="modal-close">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <h2>Спасибо за заявку!</h2>
+                    <p>Мы перезвоним Вам в ближайшее время!</p>
+                </div>
+            </div>
+        </section>
+        <script src="js/app.js"></script>
+        <script src="js/form.js"></script>
+    </body>
+</html>
