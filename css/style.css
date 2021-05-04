@@ -139,7 +139,7 @@ a:hover {
     }
 }
 .price-item:hover, .input-row input,
-.input-row textarea, .form-content .form-btn, .info-list, .tel-btn:hover, .header-top, .header {
+.input-row textarea, .form-content .form-btn, .sale-block .sale, .info-list, .tel-btn:hover, .header-top, .header {
     box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2);
 }
 
@@ -357,6 +357,27 @@ body {
     color: #ffb62e;
 }
 
+.sale-block {
+    position: relative;
+    display: inline-block;
+}
+.sale-block .sale {
+    background-color: #ffb62e;
+    padding: 6px 45px;
+    margin-top: 70px;
+    text-align: right;
+    color: #161616;
+    font-weight: 700;
+    border-radius: 15px 0 15px 0;
+}
+.sale-block .sale-img {
+    width: 160px;
+    position: absolute;
+    top: 8px;
+    right: -24%;
+    transform: rotate(-18deg);
+}
+
 .content-info {
     margin-top: 85px;
 }
@@ -371,7 +392,7 @@ body {
 
 ul.thesis-list {
     position: relative;
-    margin-top: 115px;
+    margin-top: 45px;
 }
 ul.thesis-list li {
     font-size: 18px;
@@ -576,6 +597,9 @@ p.form-desc {
 .price-item:nth-child(n+2) {
     margin-left: 2.5%;
 }
+.price-item ul {
+    margin-bottom: 15px;
+}
 
 .price-title {
     font-weight: 500;
@@ -763,7 +787,7 @@ p.form-desc {
         padding: 15px 30px;
     }
 }
-@media (max-width: 640px) {
+@media (max-width: 676px) {
     .header::before {
         opacity: 0.75;
     }
@@ -797,6 +821,10 @@ p.form-desc {
         margin-top: 15px;
     }
 
+    .transportation-item {
+        min-height: 480px;
+    }
+
     .header-top {
         padding: 15px 20px;
     }
@@ -811,6 +839,17 @@ p.form-desc {
     .logo p {
         font-size: 9px;
     }
+
+    .sale-block .sale {
+        font-size: 16px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .sale-block .sale-img {
+        top: 14px;
+        right: -27%;
+        width: 120px;
+    }
 }
 @media (max-width: 420px) {
     .header-title {
@@ -822,7 +861,7 @@ p.form-desc {
     }
 
     ul.thesis-list {
-        margin-top: 80px;
+        margin-top: 45px;
     }
     ul.thesis-list li {
         font-size: 16px;
@@ -859,5 +898,22 @@ p.form-desc {
     p.form-desc {
         font-size: 14px;
         margin-bottom: 10px;
+    }
+
+    .sale-block .sale {
+        font-size: 14px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .sale-block .sale-img {
+        transform: rotate(18deg);
+        top: 14px;
+        right: -12%;
+        width: 80px;
+    }
+}
+@media (max-width: 300px) {
+    .sale-block .sale-img {
+        display: none;
     }
 }
