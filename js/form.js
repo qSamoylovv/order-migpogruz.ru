@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('form').submit(function () {
+    $('form').submit(function (event) {
         // Событие отправки с формы
         let form_data = $(this).serialize(); // Собираем данные из полей
         $.ajax({
