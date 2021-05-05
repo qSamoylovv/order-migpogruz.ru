@@ -138,7 +138,7 @@ a:hover {
         scroll-behavior: auto !important;
     }
 }
-.price-item:hover, .input-row input,
+.price-title, .price-item:hover, .input-row input,
 .input-row textarea, .form-content .form-btn, .sale-block .sale, .info-list, .tel-btn:hover, .header-top, .header {
     box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2);
 }
@@ -556,7 +556,7 @@ p.form-desc {
 }
 
 .section-title {
-    font-size: 38px;
+    font-size: 32px;
     font-weight: 700;
     margin-bottom: 45px;
     text-align: center;
@@ -605,6 +605,10 @@ p.form-desc {
     font-weight: 500;
     font-size: 20px;
     position: relative;
+    background-color: #ffb62e;
+    padding: 6px;
+    text-align: center;
+    border-radius: 15px 0 15px 0;
 }
 .price-title::before {
     content: "";
@@ -786,6 +790,17 @@ p.form-desc {
     .header-top {
         padding: 15px 30px;
     }
+
+    .sale-block .sale {
+        font-size: 18px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .sale-block .sale-img {
+        top: 14px;
+        right: -27%;
+        width: 140px;
+    }
 }
 @media (max-width: 676px) {
     .header::before {
@@ -847,8 +862,9 @@ p.form-desc {
     }
     .sale-block .sale-img {
         top: 14px;
-        right: -27%;
-        width: 120px;
+        right: -14%;
+        width: 90px;
+        transform: rotate(-8deg);
     }
 }
 @media (max-width: 420px) {
@@ -879,7 +895,7 @@ p.form-desc {
     }
 
     .section-title {
-        font-size: 32px;
+        font-size: 28px;
     }
 
     .section-other-title {
@@ -906,10 +922,10 @@ p.form-desc {
         padding-right: 10px;
     }
     .sale-block .sale-img {
-        transform: rotate(18deg);
-        top: 14px;
-        right: -12%;
-        width: 80px;
+        transform: rotate(2deg);
+        top: 18px;
+        right: -3%;
+        width: 65px;
     }
 }
 @media (max-width: 300px) {
