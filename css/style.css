@@ -138,6 +138,42 @@ a:hover {
         scroll-behavior: auto !important;
     }
 }
+@font-face {
+    font-family: "Inter";
+    src: url(../../fonts/Inter-Bold.eot?) format("eot"), url(../../fonts/Inter-Bold.ttf) format("ttf"), url(../../fonts/Inter-Bold.woff) format("woff"), url(../../fonts/Inter-Bold.woff2) format("woff2");
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Inter";
+    src: url(../../fonts/Inter-BoldItalic.eot?) format("eot"), url(../../fonts/Inter-BoldItalic.ttf) format("ttf"), url(../../fonts/Inter-BoldItalic.woff) format("woff"), url(../../fonts/Inter-BoldItalic.woff2) format("woff2");
+    font-weight: 700;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Inter";
+    src: url(../../fonts/Inter-Medium.eot?) format("eot"), url(../../fonts/Inter-Medium.ttf) format("ttf"), url(../../fonts/Inter-Medium.woff) format("woff"), url(../../fonts/Inter-Medium.woff2) format("woff2");
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Inter";
+    src: url(../../fonts/Inter-MediumItalic.eot?) format("eot"), url(../../fonts/Inter-MediumItalic.ttf) format("ttf"), url(../../fonts/Inter-MediumItalic.woff) format("woff"), url(../../fonts/Inter-MediumItalic.woff2) format("woff2");
+    font-weight: 500;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Inter";
+    src: url(../../fonts/Inter-Regular.eot?) format("eot"), url(../../fonts/Inter-Regular.ttf) format("ttf"), url(../../fonts/Inter-Regular.woff) format("woff"), url(../../fonts/Inter-Regular.woff2) format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Inter";
+    src: url(../../fonts/Inter-Italic.eot?) format("eot"), url(../../fonts/Inter-Italic.ttf) format("ttf"), url(../../fonts/Inter-Italic.woff) format("woff"), url(../../fonts/Inter-Italic.woff2) format("woff2");
+    font-weight: 400;
+    font-style: italic;
+}
 .price-title, .price-item:hover, .input-row input,
 .input-row textarea, .form-content .form-btn, .sale-block .sale, .info-list, .tel-btn:hover, .header-top, .header {
     box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2);
@@ -181,7 +217,7 @@ body {
 
 body {
     color: #000;
-    font-family: "Rubik", sans-serif;
+    font-family: "Inter", Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -236,7 +272,7 @@ body {
     left: 0;
     bottom: 0;
     right: 0;
-    opacity: 0.94;
+    opacity: 0.8;
     z-index: 2;
 }
 
@@ -331,7 +367,6 @@ body {
 }
 .info-list .info-item {
     font-size: 18px;
-    font-weight: 500;
 }
 .info-list .info-item span {
     color: #ffb62e;
@@ -380,6 +415,7 @@ body {
 
 .content-info {
     margin-top: 85px;
+    width: 60%;
 }
 
 .header-title {
@@ -431,33 +467,7 @@ ul.thesis-list li::before {
 }
 
 .form-modal {
-    position: fixed;
-    top: 0;
-    z-index: 999;
-    width: 100%;
-    height: 100%;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-.form-modal::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #000;
-    opacity: 0.6;
-}
-
-.form-section {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 9999;
-    width: 100%;
+    width: 40%;
 }
 
 .form-title {
@@ -474,7 +484,7 @@ p.form-desc {
 }
 
 .form-content {
-    max-width: 680px;
+    max-width: 580px;
     margin: 0 auto;
     font-size: 14px;
     background-color: #ffbc40;
@@ -496,8 +506,8 @@ p.form-desc {
 }
 
 .modal-close {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     position: absolute;
     top: -28px;
     right: 5px;
@@ -505,10 +515,11 @@ p.form-desc {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    display: none;
 }
 .modal-close span {
     display: block;
-    width: 20px;
+    width: 25px;
     height: 2px;
     background-color: #fff;
     position: absolute;
@@ -525,6 +536,7 @@ p.form-desc {
 }
 .input-row input,
 .input-row textarea {
+    font-family: "Inter", Arial, sans-serif;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -683,6 +695,7 @@ p.form-desc {
     color: #ffffff;
     padding-left: 45px;
     padding-right: 45px;
+    display: none;
 }
 .open-form:hover {
     background-color: #ffb62e;
@@ -736,13 +749,18 @@ p.form-desc {
     display: flex;
 }
 
-.form-active {
+.header-top-hidden {
     display: none;
 }
 
 @media (max-width: 1199px) {
+    .sale-block .sale-img {
+        top: 85px;
+        right: -13%;
+    }
+
     .menu-info {
-        top: 84px;
+        top: 64px;
     }
     .menu-info li {
         padding: 8px 55px;
@@ -762,6 +780,53 @@ p.form-desc {
     }
 }
 @media (max-width: 991px) {
+    .content-info {
+        width: 100%;
+    }
+
+    .modal-close {
+        display: block;
+    }
+
+    .open-form {
+        display: block;
+    }
+
+    .form-modal {
+        position: fixed;
+        top: 0;
+        z-index: 999;
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: none;
+    }
+    .form-modal::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #000;
+        opacity: 0.6;
+    }
+
+    .form-active {
+        display: block;
+    }
+
+    .form-section {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+        width: 100%;
+    }
+
     .tel-btn:not(.open-form) {
         padding: 6px 12px;
     }
@@ -771,6 +836,10 @@ p.form-desc {
     }
 }
 @media (max-width: 767px) {
+    .form-content {
+        max-width: 550px;
+    }
+
     .header-title {
         font-size: 52px;
     }
@@ -804,10 +873,18 @@ p.form-desc {
 }
 @media (max-width: 676px) {
     .header::before {
-        opacity: 0.75;
+        opacity: 0.54;
     }
 }
 @media (max-width: 575px) {
+    .form-content {
+        max-width: 420px;
+    }
+
+    .header-content {
+        text-align: center;
+    }
+
     .wrapper {
         padding-left: 20px;
         padding-right: 20px;

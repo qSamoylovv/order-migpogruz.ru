@@ -6,7 +6,7 @@ $desc = trim($_POST['desc']);
 $hidden = trim($_POST['title']); 
 $fromMail = 'info@migpogruz.ru'; //Почта отправителя (в домене почты должен быть адрес вашего сайта)
 $fromName = 'Поступила заявка с сайта МигПогруз'; //Заголовок письма
-$emailTo = 'migpogruz@yandex.ru'; //Ваша почта
+$emailTo = 'migpogruz@gmail.com'; //Ваша почта
 $subject = 'Форма обратной связи migpogruz.ru'; 
 $subject = '=?utf-8?b?'. base64_encode($subject) .'?='; 
 $headers = "Content-type: text/plain; charset=\"utf-8\"\r\n"; 
