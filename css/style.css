@@ -215,6 +215,32 @@ body {
     /* Non-prefixed version, currently not supported by any browser */
 }
 
+.header-content {
+    opacity: 0;
+    /*Элемент полностью прозрачный (невидимый)*/
+    transition: 1s;
+    /*Скорость перехода состояния элемента*/
+    animation: show 0.8s 1 ease-out;
+    /* Указываем название анимации, её время и количество повторов*/
+    animation-fill-mode: forwards;
+    /* Чтобы элемент оставался в конечном состоянии анимации */
+    animation-delay: 0.3s;
+    /* Задержка перед началом */
+}
+
+.main {
+    opacity: 0;
+    transition: 0.3s opacity ease-out;
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 body {
     color: #000;
     font-family: "Inter", Arial, sans-serif;
@@ -252,17 +278,15 @@ body {
     min-height: 760px;
     padding-top: 85px;
     padding-bottom: 85px;
+    background-image: url(../images/header_l.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 68px;
+    background-attachment: fixed;
     background-color: #161616;
     position: relative;
     display: flex;
     justify-content: center;
-}
-.header #header-video {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
 }
 .header::before {
     content: "";
@@ -272,7 +296,7 @@ body {
     left: 0;
     bottom: 0;
     right: 0;
-    opacity: 0.8;
+    opacity: 0.7;
     z-index: 2;
 }
 
@@ -386,7 +410,6 @@ body {
 }
 .header-content p {
     font-size: 22px;
-    text-transform: none;
 }
 .header-content span {
     color: #ffb62e;
@@ -415,7 +438,6 @@ body {
 
 .content-info {
     margin-top: 85px;
-    width: 60%;
 }
 
 .header-title {
@@ -467,7 +489,38 @@ ul.thesis-list li::before {
 }
 
 .form-modal {
-    width: 40%;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+}
+.form-modal::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    opacity: 0.6;
+}
+
+.form-active {
+    display: block;
+}
+
+.form-section {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    width: 100%;
 }
 
 .form-title {
@@ -515,7 +568,6 @@ p.form-desc {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    display: none;
 }
 .modal-close span {
     display: block;
@@ -695,7 +747,6 @@ p.form-desc {
     color: #ffffff;
     padding-left: 45px;
     padding-right: 45px;
-    display: none;
 }
 .open-form:hover {
     background-color: #ffb62e;
@@ -753,6 +804,10 @@ p.form-desc {
     display: none;
 }
 
+.show-content {
+    opacity: 1;
+}
+
 @media (max-width: 1199px) {
     .sale-block .sale-img {
         top: 85px;
@@ -780,53 +835,6 @@ p.form-desc {
     }
 }
 @media (max-width: 991px) {
-    .content-info {
-        width: 100%;
-    }
-
-    .modal-close {
-        display: block;
-    }
-
-    .open-form {
-        display: block;
-    }
-
-    .form-modal {
-        position: fixed;
-        top: 0;
-        z-index: 999;
-        width: 100%;
-        height: 100%;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        display: none;
-    }
-    .form-modal::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background-color: #000;
-        opacity: 0.6;
-    }
-
-    .form-active {
-        display: block;
-    }
-
-    .form-section {
-        position: relative;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 9999;
-        width: 100%;
-    }
-
     .tel-btn:not(.open-form) {
         padding: 6px 12px;
     }
@@ -871,17 +879,16 @@ p.form-desc {
         width: 140px;
     }
 }
-@media (max-width: 676px) {
-    .header::before {
-        opacity: 0.54;
-    }
-}
 @media (max-width: 575px) {
     .form-content {
         max-width: 420px;
     }
 
-    .header-content {
+    .header-title {
+        text-align: center;
+    }
+
+    .content-info p {
         text-align: center;
     }
 

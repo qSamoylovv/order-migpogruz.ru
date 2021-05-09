@@ -31,3 +31,23 @@ $('.popup-send-form').on('click', function (e) {
         // headerTop.classList.remove('form-active');
     }
 });
+
+function infoViewScroll() {
+    const reveal = document.getElementsByClassName('main');
+
+    function viewInfo() {
+        [...reveal].forEach((elem) => {
+            if (elem.getBoundingClientRect().top < window.innerHeight) {
+                elem.classList.add('show-content');
+            } else if (
+                elem.getBoundingClientRect().bottom > window.innerHeight
+            ) {
+                elem.classList.remove('show-content');
+            }
+        });
+    }
+
+    document.addEventListener('scroll', viewInfo);
+}
+
+infoViewScroll();
